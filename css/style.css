@@ -231,7 +231,6 @@ a {
     margin: 0px auto; /* Creates space between header and container */
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -254,7 +253,7 @@ a {
 /* Contact info box */
 .contactinfo {
     background-color: lightgreen;
-    width: 1000px;
+    width: 100%;
     border-radius: 10px;
     padding: 0 15px 0 10px; /* Adjusted padding for consistent spacing */
     height: 100px;
@@ -435,12 +434,7 @@ h2 + a:hover {
 
     .tab1, .tab2 {
         width: 100%;
-        margin: 0; /* Remove any existing margins */
         padding: 15px; /* Adjust padding for mobile */
-    }
-
-    .tab2 {
-        margin-left: 0; /* Remove left margin */
     }
 
     /* Optional: Adjust image sizing in tabs */
@@ -459,7 +453,7 @@ h2 + a:hover {
     /* Column adjustments */
     .container {
         flex-direction: column;
-        width: 90%;
+        width: 95%;
     }
 
     .left-columns {
@@ -500,7 +494,11 @@ h2 + a:hover {
     /* Contact section */
 
     .contact {
-        margin-bottom: 10px;
+        width: 100%;
+        margin: 10px 10px 10px 12px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
     }
 
     .contactimg {
@@ -509,10 +507,17 @@ h2 + a:hover {
         padding: 0;
     }
 
+    .contactimg img {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
     .contactinfo {
         width: 100%;
         height: auto;
-        padding: 15px 50px 15px 50px;
+        padding: 15px 130px 15px 130px;
+        margin: 0 300px 0 0;
         text-align: center;
     }
 
@@ -561,6 +566,18 @@ h2 + a:hover {
         width: 100%;
         height: auto;
     }
+
+    .contactinfo {
+        width: 100%;
+        height: auto;
+        padding: 15px 30px 15px 30px;
+        text-align: center;
+    }
+
+    .contactinfo h2 a{
+        font-size: small;
+    }
+
 }
 
 /* Adjust font size for mobile screens */

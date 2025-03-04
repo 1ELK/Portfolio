@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#90EE90">
     <meta name="description" content="RayyanN's Portfolio">
     <meta name="keywords" content="Portfolio, RayyanN, Web Developer">
     <meta name="author" content="RayyanN">
@@ -65,26 +66,34 @@
     <div class="header">    
         <nav>
             <img src="./Image/RN-Logo-Light-Mode.png" height="50px" id="logo" alt="logo">
+            <!-- Add this button inside your <nav> element -->
+                <button class="burger-menu" id="burger-menu" aria-label="Mobile menu">
+                    <img src="./Image/menu.svg" alt="menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
 
             <ul class="navigationbar">
                 <div class="tooltip">
-                    <li><a href="https://github.com/1ELK" target="_blank"><img src="./Image/github-mark-green.png" id="icon" height="25px" alt="github"></a></li>
+                    <li><a href="https://github.com/1ELK" target="_blank"><img src="./Image/github.svg" id="icon" height="25px" alt="github"></a></li>
                     <span class="tooltiptext">GitHub</span>
                 </div>
                 <div class="tooltip">
-                    <li><a href="mailto:politeelk.business@gmail.com"><img src="./Image/Email-icon.png" id="icon" height="25px" alt="Email"></a></li>
+                    <li><a href="mailto:politeelk.business@gmail.com"><img src="./Image/maildotru.svg" id="icon" height="25px" alt="Email"></a></li>
                     <span class="tooltiptext">Email</span>
                 </div>
                 <div class="tooltip">
-                    <li><a href="./Document/CV1.pdf" download="CV"><img src="./Image/CV-Icon.png" id="icon" height="25px" alt="CV"></a></li>
+                    <li><a href="./Document/CV1.pdf" download="CV"><img src="./Image/readdotcv.svg" id="icon" height="25px" alt="CV"></a></li>
                     <span class="tooltiptext">CV</span>
                 </div>
                 <div class="tooltip">
-                    <li><a href="https://www.linkedin.com/in/rayyan-n-296242201/" target="_blank"><img src="./Image/linkedin.png" id="icon" height="25px" alt=""></a></li>
+                    <li><a href="https://www.linkedin.com/in/rayyan-n-296242201/" target="_blank"><img src="./Image/linkedin.svg" id="icon" height="25px" alt=""></a></li>
                     <span class="tooltiptext">Linkedin</span>
                 </div>
                 <div class="tooltip">
-                    <li><a href="https://x.com/FakePoliteELK" target="_blank"><img src="./Image/X.png" id="icon" height="25px" alt=""></a></li>
+                    <li><a href="https://x.com/FakePoliteELK" target="_blank"><img src="./Image/x.svg" id="icon" height="25px" alt=""></a></li>
                     <span class="tooltiptext">X</span>
                 </div>
             </ul>
@@ -94,7 +103,7 @@
     <div class="container">
         <div class="left-columns">
             <div class="column1">
-            <img src="./Image/Location.png" height="13px" alt="">
+            <img src="./Image/Location.png" height="20px" alt="">
             <span>Istanbul, Turkey</span>
             <h1>RayyanN</h1>
             <p>I'm Software Engineer</p>
@@ -102,19 +111,19 @@
             </div>
             
             <div class="column2">
-            <h2>Tech I Use :</h2>
+            <h2>Tech I Use:</h2>
             <div class="tooltip">
-                <img src="./Image/html-black.png" id="language-icon" alt="html">
+                <img src="./Image/html5.svg" id="language-icon" height="35px" alt="html">
                 <span class="tooltiptext">HTML</span>
             </div>
 
             <div class="tooltip">
-                <img src="./Image/CSS-black.png" id="language-icon" alt="css">
+                <img src="./Image/css3.svg" id="language-icon" height="35px" alt="css">
                 <span class="tooltiptext">CSS</span>
             </div>
 
             <div class="tooltip">
-                <img src="./Image/JavaScript-black.png" id="language-icon" alt="javascript">
+                <img src="./Image/javascript.svg" id="language-icon" height="35px" alt="javascript">
                 <span class="tooltiptext">JavaScript</span>
             </div>
             </div>
@@ -144,9 +153,7 @@
     <div class="contacttab"><p>CONTACTS</p></div>
 
     <div class="contact">
-        <div class="contactimg">
-            <img src="./Image/Contacts.png" alt="">
-        </div>
+        <img src="./Image/Contacts.svg" class="contactimg" alt="">
 
         <div class="contactinfo">
             <h2 id="h2-title">Got an idea? You can always find me here.</h2>

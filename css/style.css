@@ -14,8 +14,9 @@ nav {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures logo left, menu right */
     padding: 5px;
+    position: relative;
 }
 
 ul {
@@ -57,8 +58,8 @@ a {
     height: 25px; /* Default desktop size */
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-/* Add translateZ to leverage GPU acceleration */
-transform: translateZ(0);
+    /* Add translateZ to leverage GPU acceleration */
+    transform: translateZ(0);
 }
 
 #icon:hover {
@@ -67,26 +68,26 @@ transform: translateZ(0);
 
 /* Default desktop styles remain the same */
 .container {
-    width: 76%;
-    margin: 1px auto;
-    border-radius: 10px;
+    width: 90%; /* Changed from 74% */
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
 .column1, .column2 {
     background-color: lightgreen;
-    width: 55%;
+    width: 100%;
     border-radius: 10px;
-    margin: 10px 10px 0 10px;
-    padding: 5px 260px 5px 25px
+    margin: 10px 0 0 100px;
+    padding: 20px 165px 20px 20px; /* Simplified padding */
+    box-sizing: border-box;
 }
 
 .column2 {
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-/* Add translateZ to leverage GPU acceleration */
-transform: translateZ(0);
+    /* Add translateZ to leverage GPU acceleration */
+    transform: translateZ(0);
 }
 
 #language-icon:hover {
@@ -94,21 +95,23 @@ transform: translateZ(0);
 }
 
 #avatar {
-    padding: 10px 10px 5px 10px;
     display: block;
-    border-radius: 20px;
-    width: 345px;
-    height: 335px;
+    border-radius: 10px;
+    width: 300px;
+    height: 385px;
     object-fit: cover;
     text-align: center;
-    margin: 0 0 0 0;
+    margin: 10px 95px 0 0;
 }
 
 .experienceTab {
     background-color: lightgreen;
-    width: 74%;
+    width: 70%;
     margin: 0 auto;
+    padding: 0 30px 0 30px;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .experienceTab p {
@@ -116,11 +119,11 @@ transform: translateZ(0);
     font-size: xx-large;
     font-family: 'Courier New', Courier, monospace;
     padding: 20px 0 20px 0;
-    margin: 6px 0 6px 0;
+    margin: 0 0 6px 0;
 }
 
 .experience {
-    width: 74%;
+    width: 75%;
     margin: 0 auto; /* Added margin to create space between header and container */
     border-radius: 10px;
     display: flex;
@@ -130,8 +133,9 @@ transform: translateZ(0);
 .tab1 {
     background-color: lightgreen;
     margin: 5px 0 5px 0;
+    
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     /* Add translateZ to leverage GPU acceleration */
     transform: translateZ(0);
     will-change: transform, box-shadow;
@@ -140,9 +144,9 @@ transform: translateZ(0);
 .tab2 {
     background-color: lightgreen;
     margin: 5px 0 5px 10px;
-    pointer-events: none; /* Disabled pointer events to prevent hover effect */
+
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     /* Add translateZ to leverage GPU acceleration */
     transform: translateZ(0);
     will-change: transform, box-shadow;
@@ -194,19 +198,24 @@ transform: translateZ(0);
 .tab1:hover {
     transform: scale(1.1) translateZ(0);  /* Maintain 3D acceleration */
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    z-index: 1001;
 }
 
 .tab2:hover {
     transform: scale(1.1);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1001;
 }
 
 .contacttab {
     background-color: lightgreen;
-    width: 74%;
-    margin: 0 auto; /* Added margin to create space at the top */
+    width: 70%;
+    margin: 0 auto;
+    padding: 0 30px 0 30px;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
 }
 
 .contacttab p {
@@ -371,176 +380,177 @@ h2 + a:hover {
     transform: translateX(-50%) scale(1.1); /* Keep the scaling effect when hovered */
 }
 
-@media (max-width: 1024px) {
+/*Burger menu*/
 
-    body{
-        padding: 50px 0 0 0;
-    }
+.burger-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1001;
+    margin-left: auto; /* Pushes menu to right */
+}
 
-    .header {
-        width: 77%;
-        padding: 15px;
-    }
-
-    .container {
-        width: 80%;
-        margin: 0 auto;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .column1 {
-        background-color: lightgreen;
-        width: 60%;
-        height: 30%;
-        border-radius: 10px;
-        margin: 10px 0 0 0;
-        padding: 5px 208px 26px 25px
-    }
-
-    .column1 span {
-        font-size: 7px;
-        margin: 0 0 0 0;
-    }
-
-    .column1 img {
-        margin: 0 0 0 0;
-    }
-
-    .column1 h1{
-        font-size: 20px;
-        padding: 1px;
-        margin: 0 0 0 0;
-    }
-
-    .column1 p{
-        padding: 2px 0 0 0;
-        font-size: 15px;
-        margin: 0 0 0 0;
-    }
-
-    .column2 {
-        background-color: lightgreen;
-        width: 60%;
-        height: 30%;
-        border-radius: 10px;
-        margin: 10px 0 0 0;
-        padding: 5px 208px 20px 25px
-    }
-
-    .column2 h2{
-        font-size: 15px;
-        padding: 1px;
-        margin: 5px 0 10px 0;
-    }
-
-    .column2 img{
-        height: 50px;
-        width: 50px;
-        margin: 0 0 5px 0;
-    }
-
-    #avatar {
-        display: block;
-        border-radius: 10px;
-        width: 200px;
-        height: 220px;
-        object-fit: cover;
-        text-align: center;
-        margin: 10px 0 0 0;
-        padding: 0 0 0 0;
-    }
-
-    .experienceTab {
-        width: 80%;
-        margin: 0 auto;
-        border-radius: 10px;
-        justify-content: space-between;
-    }
-
-    .experienceTab p {
-        font-size: x-large;
-        padding: 20px 0 20px 0;
-    }
-
-    .experience {
-        width: 80%;
-        margin: 0 auto;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .tab1 {
-        width: 50%;
-        padding: 5px 395px 5px 10px;
-    }
-
-    .tab1 #tab1img{
-        width: 775px;
-        height: 300px;
-    }
-
-    .tab2 {
-        display: none;
-    }
-
-    .contacttab {
-        width: 80%;
-        margin: 0 auto;
-        border-radius: 10px;
-    }
-
-    .contacttab p {
-        font-size: x-large;
-        padding: 20px 0 20px 0;
-    }
-
-    .contact {
-        width: 80%;
-        margin: 0 auto;
-        border-radius: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .footer {
-        background-color: lightgreen;
-        width: 75%;
-        margin: 10px auto; /* Added margin to create space at the top */
-        padding: 10px 30px 5px 30px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
+@media (max-width: 768px) {
 
     #hello-text {
         font-size: 2em;
     }
+    
+    #avatar {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .navigationbar {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 200px;
+        height: calc(20vh - 60px);
+        background: lightgreen;
+        flex-direction: column;
+        padding: 15px 0;
+        margin: 30px 0 0 0;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        border-radius: 10px 0 0 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .navigationbar.active {
+        right: 0;
+    }
+
+    .experience {
+        flex-direction: column;
+        gap: 10px; /* Space between stacked items */
+    }
+
+    .tab1, .tab2 {
+        width: 100%;
+        margin: 0; /* Remove any existing margins */
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    .tab2 {
+        margin-left: 0; /* Remove left margin */
+    }
+
+    /* Optional: Adjust image sizing in tabs */
+    .tab1 #tab1img, .experience #tab2img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+    }
+
+    /* Unified mobile width */
+    .header, .experienceTab, .contacttab, .footer {
+        width: 90%;
+        padding: 0 15px;
+    }
+
+    /* Column adjustments */
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-columns {
+        width: 100%;
+        margin: 0;
+    }
+
+    .column1, .column2 {
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    /* Text adjustments */
+    .column1 h1 {
+        font-size: 1.8em;
+    }
+
+    .column1 p {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
+    .column2 h2 {
+        font-size: 1.4em;
+    }
+
+    /* Language icons */
+    #language-icon {
+        height: 30px;
+        margin: 0 8px;
+    }
+
+    /* Experience section */
+    .experience {
+        width: 90%;
+    }
+
+    /* Contact section */
+
+    .contact {
+        margin-bottom: 10px;
+    }
+
+    .contactimg {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .contactinfo {
+        min-width: 100%;
+        height: auto;
+        padding: 15px 15px 15px 15px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 480px) {
-    .header {
-        width: 85%;
-        padding: 15px;
-    }
-
-    nav {
-        padding: 5px;
-    }
-
-    /* Further shrink for very small screens */
-    #logo {
-        height: 30px;
-    }
-
-    #icon {
-        height: 15px;
-    }
 
     #hello-text {
         font-size: 1.5em;
+    }
+
+    #avatar {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Smaller screen adjustments */
+    .column1 h1 {
+        font-size: 1.5em;
+    }
+
+    .column1 p {
+        font-size: 0.9em;
+    }
+
+    #language-icon {
+        height: 25px;
+    }
+
+    /* Navigation logo */
+    #logo {
+        height: 40px;
+    }
+
+    /* Experience images */
+    .tab1 #tab1img {
+        width: 100%;
+        height: auto;
     }
 }
 

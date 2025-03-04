@@ -510,10 +510,19 @@ h2 + a:hover {
     }
 
     .contactinfo {
-        min-width: 100%;
+        width: 100%;
         height: auto;
-        padding: 15px 15px 15px 15px;
+        padding: 15px 50px 15px 50px;
         text-align: center;
+    }
+
+    .footer {
+        background-color: lightgreen;
+        width: 85%;
+        margin: 10px auto; /* Added margin to create space at the top */
+        padding: 10px 30px 5px 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 }
 

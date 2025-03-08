@@ -79,7 +79,7 @@ a {
     width: 100%;
     border-radius: 10px;
     margin: 10px 0 0 100px;
-    padding: 20px 70px 20px 20px; /* Simplified padding */
+    padding: 20px 50px 20px 20px; /* Simplified padding */
     box-sizing: border-box;
 }
 
@@ -119,7 +119,7 @@ a {
     font-size: xx-large;
     font-family: 'Courier New', Courier, monospace;
     padding: 20px 0 20px 0;
-    margin: 10px 0 6px 0;
+    margin: 10px 0 10px 0;
 }
 
 .experience {
@@ -143,7 +143,7 @@ a {
 
 .tab2 {
     background-color: lightgreen;
-    margin: 5px 0 5px 10px;
+    margin: 5px 0 5px 0x;
 
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -156,7 +156,7 @@ a {
     background-color: lightgreen;
     width: 40%;
     border-radius: 10px;
-    padding: 5px 85px 5px 10px; /* Adjusted padding for consistent spacing */
+    padding: 5px 85px 5px 10px;
 }
 
 .tab1 #tab1img{
@@ -203,16 +203,14 @@ a {
 
 .tab2:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
     z-index: 1001;
 }
 
 .contacttab {
     background-color: lightgreen;
-    width: 70%;
+    width: 75%;
     margin: 0 auto;
-    padding: 0 30px 0 30px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -223,6 +221,7 @@ a {
     font-size: xx-large;
     font-family:'Courier New', Courier, monospace;
     padding: 20px 0 20px 0;
+    margin: 10px 0 10px 0;
 }
 
 .contact {
@@ -432,21 +431,27 @@ h2 + a:hover {
     }
 
     .tab1, .tab2 {
-        width: 100%;
+        width: 95%;
         padding: 15px; /* Adjust padding for mobile */
+
     }
 
-    /* Optional: Adjust image sizing in tabs */
-    .tab1 #tab1img, .experience #tab2img {
-        width: 100%;
-        max-width: 400px;
-        height: auto;
+    .tab1:hover {
+        transform: none;
+    }
+
+    .tab2{
+        display: none;
     }
 
     /* Unified mobile width */
     .header, .experienceTab, .contacttab, .footer {
         width: 90%;
         padding: 0 15px;
+    }
+    
+    .conatactimg {
+        display: none;
     }
 
     /* Column adjustments */
@@ -494,7 +499,6 @@ h2 + a:hover {
 
     .contact {
         width: 100%;
-        margin: 10px 10px 10px 12px;
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -515,8 +519,9 @@ h2 + a:hover {
     .contactinfo {
         width: 100%;
         height: auto;
-        padding: 15px 130px 15px 130px;
-        margin: 0 300px 0 0;
+        padding: 10px 85px 10px 85px;
+        margin-right: 10px;
+        margin-left: 10px;
         text-align: center;
     }
 
@@ -569,12 +574,26 @@ h2 + a:hover {
     .contactinfo {
         width: 100%;
         height: auto;
-        padding: 15px 30px 15px 30px;
+        padding: 10px 20px 10px 20px;
+        margin-right: 5px;
+        margin-left: 5px;
         text-align: center;
     }
 
-    .contactinfo h2 a{
+    #h2-title {
         font-size: small;
+    }
+
+    .contact a {
+        font-size: smaller;
+    }
+
+    .footer {
+        width: 65%;
+        margin: 10px auto;
+        padding: 5px 50px 5px 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
 }

@@ -1,6 +1,8 @@
 * {
     font-family: 'Courier New', Courier, monospace;
     scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: lightgreen black;
 }
 
 body {
@@ -603,4 +605,27 @@ h2 + a:hover {
 @keyframes flash {
     0%, 100% { opacity: 0; }
     50% { opacity: 1; }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: black;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: lightgreen;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7dff7d;
+    box-shadow: 0 0 5px rgba(146, 255, 146, 0.5);
 }

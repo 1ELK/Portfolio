@@ -202,12 +202,12 @@ a {
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
     z-index: 1001;
 }
-
+/*
 .tab2:hover {
     transform: scale(1.1);
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
     z-index: 1001;
-}
+} */
 
 .contacttab {
     background-color: lightgreen;
